@@ -1,9 +1,87 @@
 <!doctype html>
 <html lang="zh-CN">
-<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>AIRI Gemma | Local-first Memory Agent</title><link rel="stylesheet" href="airi-site.css" /></head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AIRI Gemma | Local-first Memory Agent</title>
+  <link rel="stylesheet" href="airi-site.css" />
+</head>
 <body>
-  <nav class="nav"><div class="wrap nav-inner"><a class="brand" href="index.html"><img src="content/en/blog/DevLog-2025.03.05/assets/airi-logo-v2.avif" alt="" /><span>AIRI Gemma</span></a><div class="links"><a data-nav href="index.html">Home</a><a data-nav href="stage.html">Stage</a><a data-nav href="memory.html">Memory</a><a data-nav href="stack.html">Stack</a><a data-nav href="deploy.html">Deploy</a></div><a class="button primary" href="https://github.com/Iroha-P/airi-gemma">GitHub</a></div></nav>
-  <header class="hero"><div class="wrap hero-grid"><div class="reveal"><span class="tag">Local-first Gemma Agent</span><h1>AIRI Gemma</h1><p class="lead">一个面向本地部署的 AIRI 记忆 Agent 实验：把 Gemma / Ollama、语音、视觉、记忆、桌面舞台和插件式能力整合到可拥有、可扩展、可离线运行的个人智能体体验里。</p><div class="actions"><a class="button primary" href="deploy.html">本地部署</a><a class="button" href="stage.html">查看舞台</a></div></div><aside class="stage reveal" data-float><div class="stage-head"><b>Stage Preview</b><span>desktop + web companion</span></div><img src="content/zh-Hans/docs/manual/tamagotchi/setup-and-use/assets/manual-main-window.avif" alt="AIRI desktop stage preview" /><div class="stage-grid"><div class="mini"><small>Runtime</small><b>Gemma / Ollama</b></div><div class="mini"><small>Memory</small><b>local-first</b></div></div></aside></div></header>
-  <main><section><div class="wrap panel reveal"><div class="section-head"><div><span class="tag">AIRI Identity</span><h2>不是工业面板，是本地智能体舞台</h2></div><p>AIRI Gemma 的页面保留角色、陪伴、记忆和桌面常驻感，视觉上更轻柔，但交互仍有扫描、悬停和多页跳转。</p></div><div class="grid-3"><a class="card" href="stage.html"><img src="content/zh-Hans/docs/manual/tamagotchi/setup-and-use/assets/manual-main-window.avif" alt="AIRI 主窗口" /><div class="body"><h3>桌面舞台</h3><p>角色、窗口和控制面板保持常驻体验。</p></div></a><a class="card" href="memory.html"><img src="content/en/blog/DevLog-2025.04.14/assets/memory-retrieval.avif" alt="AIRI memory retrieval" /><div class="body"><h3>本地记忆</h3><p>对话、偏好和上下文尽量留在本地链路。</p></div></a><a class="card" href="deploy.html"><img src="content/zh-Hans/docs/manual/tamagotchi/setup-and-use/assets/manual-models.avif" alt="模型设置" /><div class="body"><h3>Gemma / Ollama</h3><p>围绕普通 Windows 用户的本地部署路径。</p></div></a></div></div></section><section><div class="wrap panel reveal"><div class="section-head"><div><span class="tag">Live Demo Reel</span><h2>实机动态预览</h2></div><p>这里使用仓库已有的 AIRI 实机演示视频，自动静音循环播放；首屏人物预览也改成完整显示，不再裁切头发或身体。</p></div><div class="reel"><div class="reel-video"><video autoplay muted loop playsinline poster="content/en/blog/DevLog-2025.08.05/assets/airi-demo-vrm-light.avif"><source src="content/en/blog/DevLog-2025.08.05/assets/airi-demo-move.mp4" type="video/mp4" /></video></div><div class="reel-copy"><span class="tag">Desktop Companion</span><h3>完整人物 + 真实交互</h3><p>视频区域使用 contain 显示，尽量保留完整人物和实际界面，不再用封面裁切去制造视觉块。</p><a class="button primary" href="stage.html">查看 Stage 页面</a></div></div></div></section></main>
-  <footer><div class="wrap">AIRI Gemma promotional site. Local-first memory agent edition.</div></footer><script src="airi-site.js"></script>
-</body></html>
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="index.html"><img src="content/en/blog/DevLog-2025.03.05/assets/airi-logo-v2.avif" alt="" /><span>AIRI Gemma</span></a>
+      <div class="links">
+        <a data-nav href="index.html">Home</a>
+        <a data-nav href="stage.html">Stage</a>
+        <a data-nav href="memory.html">Memory</a>
+        <a data-nav href="stack.html">Stack</a>
+        <a data-nav href="deploy.html">Deploy</a>
+      </div>
+      <a class="button primary" href="https://github.com/Iroha-P/airi-gemma">GitHub</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div class="reveal">
+        <span class="tag">Local-first Gemma Agent</span>
+        <h1>AIRI Gemma</h1>
+        <p class="lead">面向本地部署的 AIRI 记忆 Agent：把 Gemma / Ollama、语音、视觉、记忆、桌面舞台和插件能力整合成一个可拥有、可扩展、可离线运行的个人智能体。</p>
+        <div class="actions">
+          <a class="button primary" href="deploy.html">本地部署</a>
+          <a class="button" href="stage.html">查看舞台</a>
+        </div>
+      </div>
+      <aside class="stage reveal" data-float>
+        <div class="stage-head"><b>Desktop Stage Preview</b><span>live companion</span></div>
+        <img src="content/zh-Hans/docs/manual/tamagotchi/setup-and-use/assets/manual-main-window.avif" alt="AIRI 桌面舞台完整人物预览" />
+        <div class="stage-grid">
+          <div class="mini"><small>Runtime</small><b>Gemma / Ollama</b></div>
+          <div class="mini"><small>Memory</small><b>local-first</b></div>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="wrap panel reveal">
+        <div class="section-head">
+          <div><span class="tag">AIRI Identity</span><h2>本地智能体舞台</h2></div>
+          <p>AIRI Gemma 保留角色、陪伴、记忆和桌面常驻感。它不是工业面板，而是一个能运行在本地、能继续扩展的角色智能体空间。</p>
+        </div>
+        <div class="grid-3">
+          <a class="card" href="stage.html"><img src="content/zh-Hans/docs/manual/tamagotchi/setup-and-use/assets/manual-main-window.avif" alt="AIRI 桌面舞台预览" /><div class="body"><h3>桌面舞台</h3><p>展示 AIRI 在真实桌面窗口里的完整人物和交互按钮。</p></div></a>
+          <a class="card" href="memory.html"><img src="content/en/blog/DevLog-2025.04.14/assets/memory-retrieval.avif" alt="AIRI memory retrieval" /><div class="body"><h3>长期记忆系统</h3><p>双脑载入、LLMWiki 知识库和隐私闸门让上下文长期可控。</p></div></a>
+          <a class="card" href="deploy.html"><img src="content/zh-Hans/docs/manual/tamagotchi/setup-and-use/assets/manual-models.avif" alt="模型设置" /><div class="body"><h3>Gemma / Ollama</h3><p>围绕普通 Windows 用户的本地部署路径。</p></div></a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap panel reveal">
+        <div class="section-head">
+          <div><span class="tag">Live Demo Reel</span><h2>实机动态演示</h2></div>
+          <p>这里使用仓库已有的 AIRI 实机演示视频，静音循环播放，用来展示角色和界面的真实动态效果。</p>
+        </div>
+        <div class="reel">
+          <div class="reel-video">
+            <video autoplay muted loop playsinline poster="content/en/blog/DevLog-2025.08.05/assets/airi-demo-vrm-light.avif">
+              <source src="content/en/blog/DevLog-2025.08.05/assets/airi-demo-move.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="reel-copy">
+            <span class="tag">Desktop Companion</span>
+            <h3>角色、舞台、交互一起动起来</h3>
+            <p>这段演示用于展示 AIRI 作为桌面陪伴式 Agent 的实际观感：角色、窗口、状态和交互都在同一个舞台中出现。</p>
+            <a class="button primary" href="stage.html">查看 Stage 页面</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap">AIRI Gemma promotional site. Local-first memory agent edition.</div></footer>
+  <script src="airi-site.js"></script>
+</body>
+</html>
