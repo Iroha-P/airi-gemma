@@ -164,6 +164,7 @@
       font-size: clamp(18px, 2vw, 23px);
       line-height: 1.68;
       color: #39434a;
+      overflow-wrap: anywhere;
     }
 
     .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 26px; }
@@ -360,6 +361,7 @@
     @media (max-width: 560px) {
       .wrap { width: min(100% - 24px, 1180px); }
       h1 { font-size: 44px; }
+      .stage-head span { display: none; }
       .notes, .stage-grid, .modules, .stack { grid-template-columns: 1fr; }
       .actions .button { width: 100%; }
       section { padding: 58px 0; }
