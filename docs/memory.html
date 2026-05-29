@@ -1,4 +1,152 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Memory | AIRI Gemma</title><link rel="stylesheet" href="airi-site.css" /></head><body>
-<nav class="nav"><div class="wrap nav-inner"><a class="brand" href="index.html"><img src="content/en/blog/DevLog-2025.03.05/assets/airi-logo-v2.avif" alt="" /><span>AIRI Gemma</span></a><div class="links"><a data-nav href="index.html">Home</a><a data-nav href="stage.html">Stage</a><a data-nav href="memory.html">Memory</a><a data-nav href="stack.html">Stack</a><a data-nav href="deploy.html">Deploy</a></div><a class="button primary" href="https://github.com/Iroha-P/airi-gemma">GitHub</a></div></nav>
-<header class="page-hero"><div class="wrap reveal"><span class="tag">Local Memory</span><h1>记忆与上下文</h1><p class="lead">本地优先的意义在于让长期偏好、人物设定和上下文检索更可控，也更适合私人实验。</p></div></header>
-<main><section><div class="wrap panel reveal"><div class="grid-3"><article class="card"><img src="content/en/blog/DevLog-2025.04.14/assets/memory-retrieval.avif" alt="memory retrieval" /><div class="body"><h3>记忆检索</h3><p>从历史上下文中取回有用片段。</p></div></article><article class="card"><img src="content/en/blog/DevLog-2025.04.14/assets/memory-decay.avif" alt="memory decay" /><div class="body"><h3>记忆衰减</h3><p>让旧记忆逐步降权，避免上下文污染。</p></div></article><article class="card"><img src="content/en/blog/DevLog-2025.04.14/assets/memory-emotional-score.avif" alt="memory emotional score" /><div class="body"><h3>情绪权重</h3><p>为陪伴式 Agent 留出更细腻的状态表达。</p></div></article></div></div></section></main><footer><div class="wrap">AIRI Gemma Memory.</div></footer><script src="airi-site.js"></script></body></html>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Memory | AIRI Gemma</title>
+  <link rel="stylesheet" href="airi-site.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="index.html"><img src="content/en/blog/DevLog-2025.03.05/assets/airi-logo-v2.avif" alt="" /><span>AIRI Gemma</span></a>
+      <div class="links">
+        <a data-nav href="index.html">Home</a>
+        <a data-nav href="stage.html">Stage</a>
+        <a data-nav href="memory.html">Memory</a>
+        <a data-nav href="stack.html">Stack</a>
+        <a data-nav href="deploy.html">Deploy</a>
+      </div>
+      <a class="button primary" href="https://github.com/Iroha-P/airi-gemma">GitHub</a>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="wrap memory-hero-grid reveal">
+      <div>
+        <span class="tag">Long-term Memory</span>
+        <h1>长期记忆系统</h1>
+        <p class="lead">AIRI Gemma 的核心不是普通聊天记录，而是一个面向长期陪伴和私人实验的记忆系统：把用户画像、偏好、项目状态、边界规则和可检索知识库沉淀为可审查、可迁移、可持续演化的本地上下文。</p>
+        <div class="actions">
+          <a class="button primary" href="#dual-brain">双脑系统</a>
+          <a class="button" href="#llmwiki">LLMWiki</a>
+        </div>
+      </div>
+      <aside class="memory-visual">
+        <img src="content/en/blog/DevLog-2025.04.14/assets/memory-driver.avif" alt="AIRI memory driver" />
+        <div class="memory-caption">记忆不只是向量召回，而是一条从候选记忆、隐私分级、审查确认到长期知识库的完整链路。</div>
+      </aside>
+    </div>
+  </header>
+
+  <main>
+    <section id="dual-brain">
+      <div class="wrap panel reveal">
+        <div class="memory-band">
+          <div>
+            <span class="tag">Dual Brain</span>
+            <h2>双脑载入：快反应与长期人格分开管理</h2>
+            <p>你主要开发的长期记忆系统可以理解为 AIRI 的第二个大脑：即时对话仍然保持轻量、快速、可中断；长期脑负责沉淀稳定事实、人物设定、项目状态和用户边界。这样角色不会每次重新认识用户，也不会把所有历史粗暴塞进上下文窗口。</p>
+            <p>双脑系统的关键是“载入”而不是“堆叠”：对话时只把本轮真正相关、通过安全规则的记忆片段装入上下文；完整记忆库仍然留在本地，等待检索、审查和演化。</p>
+          </div>
+          <div class="brain-board">
+            <article class="brain-node">
+              <small>Fast Brain</small>
+              <h3>即时对话脑</h3>
+              <p>处理当前输入、语音、视觉和角色反馈，保证桌面舞台里的 AIRI 能及时回应。</p>
+            </article>
+            <article class="brain-node">
+              <small>Memory Brain</small>
+              <h3>长期记忆脑</h3>
+              <p>保存长期偏好、人物设定、项目线索、边界规则和可复用知识，按隐私等级决定能否进入本轮上下文。</p>
+            </article>
+            <article class="brain-node">
+              <small>Safety Gate</small>
+              <h3>隐私与安全闸门</h3>
+              <p>Secret 记忆、敏感路径、密钥和不适合云端模型的内容会被拦截，只在本地链路中可控使用。</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="llmwiki">
+      <div class="wrap reveal">
+        <div class="section-head">
+          <div>
+            <span class="tag">LLMWiki</span>
+            <h2>把碎片记忆整理成可读知识库</h2>
+          </div>
+          <p>LLMWiki 不是把聊天原文扔进向量库，而是把稳定、可公开或可本地审查的记忆编译成 Markdown Wiki。人可以读，模型可以检索，也能迁移到 Obsidian 风格的知识库。</p>
+        </div>
+        <div class="wiki-flow">
+          <article class="wiki-pill"><b>Raw Sources</b><span>聊天、文档、网页剪藏和项目资料先作为事实来源进入导入管线，不直接覆盖长期记忆。</span></article>
+          <article class="wiki-pill"><b>Review</b><span>候选记忆经过安全扫描、隐私分级和人工确认，避免把敏感内容写入公共上下文。</span></article>
+          <article class="wiki-pill"><b>Memory DB</b><span>本地数据库仍是事实源，保存状态、重要性、类型、更新时间和检索标记。</span></article>
+          <article class="wiki-pill"><b>LLMWiki</b><span>导出用户画像、项目状态、边界规则、index.md 和 log.md，形成可读、可审计的长期脑。</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap panel reveal">
+        <div class="section-head">
+          <div>
+            <span class="tag">Memory Lifecycle</span>
+            <h2>从一次对话到长期记忆</h2>
+          </div>
+          <p>这条链路让 AIRI 的记忆有来源、有权重、有衰减、有审查，也能在需要时重新进入上下文。</p>
+        </div>
+        <div class="memory-steps">
+          <article class="step"><strong>1</strong><h3>捕获</h3><p>从对话、任务、视觉或项目资料中抽取可能有长期价值的事实和偏好。</p></article>
+          <article class="step"><strong>2</strong><h3>筛选</h3><p>识别 secret、public、local 等隐私等级，过滤密钥、账号和危险指令。</p></article>
+          <article class="step"><strong>3</strong><h3>确认</h3><p>进入 Review Workbench，只有被确认的候选记忆才会成为 active 记忆。</p></article>
+          <article class="step"><strong>4</strong><h3>检索</h3><p>根据当前任务召回相关片段，按目标模型决定哪些内容可以载入。</p></article>
+          <article class="step"><strong>5</strong><h3>演化</h3><p>通过衰减、冲突检查、梦境整理和 LLMWiki 导出，让记忆长期保持干净。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap reveal">
+        <div class="section-head">
+          <div>
+            <span class="tag">Innovation</span>
+            <h2>主要创新点</h2>
+          </div>
+          <p>这部分适合作为你对外介绍 AIRI Gemma 时的核心叙事：角色、桌面舞台和本地模型只是入口，长期记忆系统才是让 AIRI 变成“个人智能体”的底层能力。</p>
+        </div>
+        <div class="grid-3">
+          <article class="module"><div class="icon mint">01</div><h3>本地优先的长期脑</h3><p>长期偏好、用户边界和项目状态优先保存在本地，云端模型默认只能接触通过 public-safe 规则的上下文。</p></article>
+          <article class="module"><div class="icon violet">02</div><h3>双脑按需载入</h3><p>即时对话脑负责实时互动，长期记忆脑负责稳定人格和知识。每轮只载入相关片段，避免上下文污染。</p></article>
+          <article class="module"><div class="icon gold">03</div><h3>LLMWiki 知识库</h3><p>把 Memory DB 中稳定、可审查的内容导出为 Markdown Wiki，并生成 index.md 与 log.md，方便检索、迁移和审计。</p></article>
+          <article class="module"><div class="icon coral">04</div><h3>记忆衰减与情绪权重</h3><p>通过重要性、检索次数、更新时间、情绪倾向等信号，让 AIRI 的长期状态更接近真实陪伴。</p></article>
+          <article class="module"><div class="icon mint">05</div><h3>安全扫描与隐私闸门</h3><p>Prompt injection、密钥、敏感路径和 secret 记忆会被 withheld，保证记忆不会因为一次检索被错误暴露。</p></article>
+          <article class="module"><div class="icon violet">06</div><h3>梦境整理工作流</h3><p>在长期运行后，由本地模型整理可回写的候选记忆、过期结论和冲突项，形成可确认的记忆演化报告。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap panel reveal">
+        <div class="section-head">
+          <div>
+            <span class="tag">Live Evidence</span>
+            <h2>记忆系统 Demo 片段</h2>
+          </div>
+          <p>这里保留来自主站记忆开发文档的图：检索、衰减、情绪权重和记忆控制器都指向同一个目标，让 AIRI 的长期上下文可解释、可调试。</p>
+        </div>
+        <div class="evidence-grid">
+          <article class="card"><img src="content/en/blog/DevLog-2025.04.14/assets/memory-retrieval.avif" alt="memory retrieval" /><div class="body"><h3>记忆检索</h3><p>从历史上下文中取回真正相关的片段，而不是无差别拼接全部历史。</p></div></article>
+          <article class="card"><img src="content/en/blog/DevLog-2025.04.14/assets/memory-decay.avif" alt="memory decay" /><div class="body"><h3>记忆衰减</h3><p>旧记忆会随时间和使用频率逐步降权，减少过期信息对角色状态的污染。</p></div></article>
+          <article class="card"><img src="content/en/blog/DevLog-2025.04.14/assets/memory-emotional-score.avif" alt="memory emotional score" /><div class="body"><h3>情绪权重</h3><p>为陪伴式 Agent 留出更细腻的状态表达，让记忆不只是一堆事实条目。</p></div></article>
+          <article class="card"><img src="content/en/blog/DevLog-2025.04.14/assets/memory-controler.avif" alt="memory controller" /><div class="body"><h3>记忆控制器</h3><p>将候选、检索、导出和清理流程收束到可管理的控制界面。</p></div></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap">AIRI Gemma Memory System.</div></footer>
+  <script src="airi-site.js"></script>
+</body>
+</html>
