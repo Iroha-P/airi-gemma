@@ -117,6 +117,23 @@ h1 { margin: 24px 0 18px; font-size: clamp(48px, 8vw, 108px); line-height: 0.92;
   overflow: hidden;
   transform-style: preserve-3d;
 }
+.stage::before {
+  content: "LIVE";
+  position: absolute;
+  top: 58px;
+  right: 14px;
+  z-index: 2;
+  padding: 5px 8px;
+  border: 1px solid rgba(31, 166, 122, 0.3);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+  color: #137a59;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  box-shadow: 0 10px 24px rgba(31, 166, 122, 0.14);
+  animation: live-pulse 2.4s ease-in-out infinite;
+}
 .stage::after {
   content: "";
   position: absolute;
@@ -134,11 +151,15 @@ h1 { margin: 24px 0 18px; font-size: clamp(48px, 8vw, 108px); line-height: 0.92;
   object-fit: contain;
   object-position: center;
   background: linear-gradient(180deg, #f7fbf7, #eef6f2);
+  transform-origin: 50% 56%;
+  animation: airi-idle 5.8s ease-in-out infinite;
 }
+.stage:hover img { animation-duration: 3.6s; }
 .stage-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 14px; }
 .mini { border: 1px solid var(--line); border-radius: 8px; padding: 12px; background: rgba(247, 251, 248, 0.9); }
 .mini small { color: var(--muted); }
 .mini b { display: block; margin-top: 7px; color: var(--mint); }
+.stage .mini:nth-child(2) b { animation: memory-glow 2.8s ease-in-out infinite; }
 
 section { padding: 78px 0; }
 .page-hero { padding: 76px 0 36px; background: radial-gradient(circle at 75% 20%, rgba(123, 108, 246, 0.15), transparent 36%); }
@@ -315,6 +336,19 @@ h2 { margin: 16px 0 0; font-size: clamp(30px, 4vw, 52px); line-height: 1.04; }
 footer { border-top: 1px solid var(--line); padding: 38px 0; color: var(--muted); background: rgba(255, 255, 255, 0.72); }
 
 @keyframes scan { 0%, 36% { transform: translateX(-130%); } 64%, 100% { transform: translateX(130%); } }
+@keyframes airi-idle {
+  0%, 100% { transform: translateY(0) scale(1); }
+  42% { transform: translateY(-5px) scale(1.012); }
+  68% { transform: translateY(2px) scale(0.998); }
+}
+@keyframes live-pulse {
+  0%, 100% { opacity: 0.72; box-shadow: 0 10px 24px rgba(31, 166, 122, 0.12); }
+  50% { opacity: 1; box-shadow: 0 10px 30px rgba(31, 166, 122, 0.3); }
+}
+@keyframes memory-glow {
+  0%, 100% { color: var(--mint); text-shadow: none; }
+  50% { color: #0f8f6a; text-shadow: 0 0 18px rgba(31, 166, 122, 0.32); }
+}
 @keyframes fade-up { from { opacity: 1; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
 
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
