@@ -1,0 +1,1835 @@
+common:
+  save: Save
+animations:
+  stage-transitions:
+    title: Disable Stage Transitions
+  use-page-specific-transitions:
+    description: >-
+      Some pages will have their own transitions, this will override the stage
+      transitions
+    title: Use Page Specific Transitions
+dialogs:
+  onboarding:
+    title: Welcome to AIRI!
+    description: Let's set up your first AI provider to get started.
+    selectProvider: Choose an AI Provider
+    configureProvider: Configure {provider}
+    apiKey: API Key
+    apiKeyHelp: Get your API key from {provider} and paste it here
+    baseUrl: Base URL
+    baseUrlHelp: API endpoint URL (use default if unsure)
+    accountId: Account ID
+    validationRunning: Running tests
+    validationSuccess: Configuration validation success
+    validationPartial: Configuration partially validated
+    validationFailed: Configuration validation failed
+    validationError: 'Validation error: {error}'
+    testGeneration: Ping API
+    testGenerationRunning: Ping...
+    testGenerationFailed: Ping test failed
+    retryPingCheck: Retry
+    skipForNow: Skip for now
+    saveAndContinue: Save and Continue
+    next: Next
+    retry: Retry
+    credentialsSafeLabel: Keep your API keys and credentials safe!
+    credentialsSafeLocal: >-
+      AIRI is running pure locally in your PC, and we will never steal your
+      credentials for AI / LLM providers. But keep in mind that your API keys
+      are sensitive information. Make sure to keep them safe and do not share
+      them with anyone.
+    credentialsSafeOpenSource: >-
+      AIRI is open sourced at {github}, if you want to check how we handle your
+      credentials, feel free to inspect our code.
+    enableChatCheck: >-
+      Allow airi to send a "ping" message to the first available chat model to
+      check availability
+    start: Let's do it!
+    loginPrompt: Sign in to use the official AIRI provider for the best experience.
+    loginAction: Sign in
+    setupWithoutSigningIn: Setup with your provider
+    flux: Flux
+    buyFlux: Charge Flux
+    select-model: Choose model
+    no-models: No available models
+    no-models-help: >-
+      Please return to the previous step and check your API key, or check the
+      network connection.
+    permissions:
+      title: Notifications
+      description: You can allow notifications now or continue and set it up later.
+      notificationsTitle: Notifications
+      notificationsDescription: Allow reminders and important status updates.
+      notificationsAction: Request notification permission
+      notificationsNotGrantedHint: If denied, you can enable notifications later from iOS Settings.
+      openSettings: Open iOS Settings
+      optionalHint: You can continue even if notification permission is not granted.
+      stateUnknown: Not requested
+      stateRequesting: Requesting...
+      stateGranted: Granted
+      stateNotGranted: Not granted
+  bug-report:
+    title: Bug report (´;ω;`)ヾ(･∀･`)
+    subtitle: Oops, sorry we made something wrong. Would you mind telling us what happened?
+    trigger-label: Report a Bug
+    submit-label: Send Bug Report
+    triage-description: Include screenshot and page context to help us triage this issue.
+    description-placeholder: Steps to reproduce, expected behavior, and actual behavior
+    include-current-page-screenshot: Include current page screenshot
+    manual-media:
+      label: Manually choose screenshots / recordings
+      optional: Optional.
+    media-files:
+      label: Media files
+      description: 'Optional: manually select.'
+      placeholder: Choose screenshot or video file
+      selected-count: '{count} file(s) selected'
+    last-submitted-preview: Last Submitted Payload Preview
+language:
+  title: Language
+  description: |
+    UI language. You can set characters' language later.
+controls-island:
+  icon-size:
+    title: Controls Island Icon Size
+    description: Adjust the size of the controls island icons
+    auto: Auto (responsive)
+    large: Large (default)
+    small: Small
+analytics:
+  notice:
+    title: Usage analytics
+    description: >-
+      AIRI collects anonymous usage analytics to help us understand how the app
+      is used and improve stability. No personal data is collected.
+    privacyPrefix: Read the
+    privacyLink: privacy policy
+    onboardingHint: You can turn analytics off later in Settings > System > General.
+    settingsHint: You can turn analytics off at any time.
+  toggle:
+    title: Enable usage analytics
+    description: Turn this off to opt out of analytics collection.
+  disabled:
+    title: Analytics disabled for this development build
+live2d:
+  change-model:
+    from-file: Load from File
+    from-file-select: Select
+    from-url: Load from URL
+    from-url-confirm: Load
+    from-url-placeholder: Enter Live2D model URL
+    title: Change Model
+  edit-motion-map:
+    title: Edit motion map
+  map-motions:
+    play: Play Motion
+    title: Map Motions
+  title: Live2D Settings
+  scale-and-position:
+    title: Scale And Position
+    scale: Scale
+    x: X
+    'y': 'Y'
+  switch-to-vrm:
+    title: Switch to 3D Avatar?
+    change-to-vrm: Click here to switch to the 3D avatar setting (VRM)
+  theme-color-from-model:
+    title: Extract colors from model
+    button-extract:
+      title: Extract
+  focus:
+    title: Disable model mouse tracking
+    button-disable:
+      title: Disable model mouse tracking
+  render-scale:
+    title: Render scale
+  fps:
+    title: FPS
+    description: Limit rendering frame rate
+    options:
+      unlimited: ∞
+microphone: Microphone
+models: Model
+pages:
+  account:
+    title: Account
+    description: View your profile and manage your account
+    notLoggedIn: Sign in to view your account and access all features
+    login: Sign in
+    logout: Sign out
+    fluxBalance: Flux Balance
+    viewFluxDetails: View details
+    signedInAs: Signed in as
+  card:
+    activate: Activate
+    active: Active
+    active_badge: Currently Active
+    cancel: Cancel action
+    save: Save changes
+    card_not_found: Card not found
+    character: Character
+    close: Close
+    chat:
+      provider: Chat / Provider
+    consciousness:
+      model: Consciousness / Model
+    created_by: created by
+    creator_notes: Creator Notes
+    delete: Delete
+    delete_card: Delete Card
+    delete_confirmation: Are you sure you want to delete this card?
+    description: Use AIRI character card presets
+    description_label: Description
+    drop_here: Drop to upload
+    create_card: Create a new Card
+    edit_card: Edit Card
+    creation:
+      identity: Identity
+      name: Name
+      nickname: Nickname
+      description: Description
+      behavior: Behavior
+      greetings: Greetings (one per line)
+      settings: Settings
+      version: Version
+      create: Create
+      defaults:
+        name: Name
+        personality: You are a regular human, curious about everything.
+        scenario: You recently woke up and forgot everything about your previous life.
+        systemprompt: You will receive messages, answer to them like a real human.
+        posthistoryinstructions: Remember to imitate an human.
+      modules_info: >-
+        Configure modules for this character card. If not set, default module
+        configuration will be used.
+      use_default: Use default
+      use_default_not_configured: Use default (not configured)
+      fields_info:
+        subtitle: >-
+          You can put here some details about the character you are creating,
+          explain his history and context, and how your interactions should be
+          answered.
+        name: Is the formal name of this character.
+        nickname: You can also give a nickname that will be used in priority.
+        description: Description of this character.
+        notes: If you want to add some personal notes.
+        personality: >-
+          Describe here the personality of your character. Shy ? Curious ?
+          Anything else ?
+        scenario: What are the surroundings ? What is the current situation ?
+        greetings_field: Greetings
+        greetings: How your character should say "hello" ?
+        systemprompt: Explain here to the AI LLM how it should answer when prompted.
+        posthistoryinstructions: Place here anything the AI LLM should read after the messages history.
+        version: >-
+          Card version, you should increase this if you are making changes from
+          a previous card.
+        consciousness_model: Select the consciousness model (AI model) for this character.
+        speech_model: Select the speech synthesis model and voice for this character.
+      errors:
+        name: Name should be valid or non-empty.
+        version: 'Error: Invalid version number !'
+        description: 'Error: You must provide a description for this card.'
+        personality: 'Error: A personality must be provided for this character.'
+        scenario: 'Error: A scenario is required.'
+        systemprompt: 'Error: Please, provide a system prompt.'
+        posthistoryinstructions: 'Error: Post history prompt is required.'
+    modules: Modules
+    name_asc: Name (A-Z)
+    name_desc: Name (Z-A)
+    no_cards: No cards yet. Click the button above to upload one!
+    no_results: No matching cards found
+    personality: Personality
+    posthistoryinstructions: Post-History Instructions
+    recent: Recently Added
+    scenario: Scenario
+    search: Search cards...
+    sort_by: Sort by
+    body-model: Body / Display Model
+    speech:
+      provider: Speech / Provider
+      model: Speech / Model
+      voice: Speech / Voice
+    systemprompt: System Prompt
+    title: AIRI Card
+    try_different_search: Try a different search term
+    upload: Upload
+    upload_desc: Click or drag file to upload
+  memory:
+    description: Where memories got stored, and organized
+    title: Memory
+    sections:
+      create:
+        title: Add memory
+        description: Save a confirmed fact, preference, project state, or shared moment.
+        edit-title: Edit memory
+        edit-description: Review and update this memory before it becomes part of AIRI's long-term profile.
+    fields:
+      content: Content
+      content-placeholder: AIRI should remember...
+      summary: Summary
+      summary-placeholder: Optional short summary
+      type: Type
+      privacy: Privacy
+      tags: Tags
+      tags-placeholder: comma,separated,tags
+      importance: Importance
+      importance-placeholder: '1-5'
+      search: Search
+      search-placeholder: Search local memories
+      source: Source
+      updated: Updated
+      last-used: Last used
+      correction: Correct memory
+      correction-placeholder: Write what AIRI should remember instead
+    actions:
+      save: Save memory
+      update: Update memory
+      search: Search
+      refresh: Refresh
+      delete: Delete
+      approve: Approve
+      approve-filtered: Approve filtered
+      reject-filtered: Reject filtered
+      archive-filtered: Archive filtered
+      reject-candidate: Reject candidate
+      keep-candidate-archive-related: Keep candidate
+      confirm-delete: Delete memory
+      clear: Clear all memories
+      confirm-clear: Clear all
+      export-llmwiki: Export LLMWiki
+      export-obsidian-vault: Export Obsidian vault
+      compact-profile: Compact profile
+      refresh-review-workbench: Review workbench
+      preview-public-profile: Preview public profile export
+      export-public-profile: Export public profile
+      preview-lora-dataset-candidates: Preview LoRA export
+      export-lora-dataset-candidates: Export LoRA candidates
+      validate-lora-training-package: Check LoRA package
+      export-backup: Export memory backup
+      import-backup: Import memory backup
+      preview-backup: Preview memory backup
+      import-selected-backup: Import selected memories
+      import-knowledge-base: Import knowledge base
+      import-wechat-records: Import WeChat records
+      import-feishu-records: Import Feishu records
+      import-qq-records: Import QQ records
+      correct: Correct
+      explain: Explain
+      cancel: Cancel
+      submit-correction: Submit correction
+    status:
+      total: Total
+      active: Active
+      needs-review: Needs review
+      importance: 'Importance: {value}'
+      access-count: 'Used {value} times'
+      never-used: Never used
+    types:
+      note: Note
+      profile: Profile
+      preference: Preference
+      project: Project
+      event: Event
+      conversation: Conversation
+      habit: Habit
+      knowledge: Knowledge
+    privacy:
+      public: Public
+      local: Local
+      sensitive: Sensitive
+      secret: Secret
+    source:
+      manual: Manual
+      chat_turn: Chat
+      import_wechat: WeChat import
+      import_lark: Lark import
+      import_qq: QQ import
+      knowledge_base: Knowledge base
+      llmwiki: LLMWiki
+      agent_reflection: Agent reflection
+    conflicts:
+      duplicate: Possible duplicate
+      conflict: Possible conflict
+      unknown: Needs review
+      related: Related memory
+    compact-profile-preview:
+      title: AIRI compact profile
+      description: '{count} reviewed memories are currently shaping AIRI.'
+    import-review:
+      updated: 'Review queue updated: {count} items need review.'
+      open-review-workbench: Open review queue
+    review-workbench:
+      title: Memory review workbench
+      description: '{total} memories need review.'
+      generated-at: 'Snapshot generated at {time}.'
+      filtered-description: Showing {shown} of {total} review items.
+      priority-summary: 'Priority: {high} high / {medium} medium / {low} low.'
+      high-priority-notice: '{count} high priority review items need attention first.'
+      empty: No review items.
+      filtered-empty: No review items match this filter.
+      show-all: Show all
+      suggested-actions: 'Suggested actions:'
+      filters:
+        all: All
+        high-priority: High priority
+        dream-candidates: Dream candidates
+        persona-candidates: Persona candidates
+        safety-risks: Safety risks
+        conflicts: Conflicts
+        stale-active: Stale active
+      priority:
+        high: High priority
+        medium: Medium priority
+        low: Low priority
+      reasons:
+        persona_candidate: Persona candidate
+        dream_candidate: Dream candidate
+        pending_candidate: Pending candidate
+        conflict: Possible conflict
+        safety_risk: Safety risk
+        stale_active: Stale active memory
+      evidence:
+        title: Evidence
+        safety-kind: 'Safety finding {index} kind'
+        safety-severity: 'Safety finding {index} severity'
+        safety-reason: 'Safety finding {index} reason'
+        dream-session: Dream session
+        requires-review: Requires review
+        lora-dataset-candidate: LoRA dataset candidate
+        persona-derived-from: Persona derived from
+        persona-reason: Persona reason
+        conflict-related: 'Conflict {index} related memory'
+        conflict-reason: 'Conflict {index} reason'
+        conflict-score: 'Conflict {index} score'
+        stale-updated: Last updated
+        stale-last-accessed: Last accessed
+        stale-access-count: Access count
+        yes: Yes
+        no: No
+      actions:
+        approve: Approve
+        archive: Archive
+        archive_related: Archive related
+        edit: Edit
+        keep: Keep
+        reclassify: Reclassify
+        reject: Reject
+    backup-preview:
+      title: Backup preview
+      description: '{total} memories found, {selected} selected for import.'
+      selected: Selected
+      empty-items: Empty items
+      conflict-items: Conflict items
+      safety-risk-items: Safety-risk items
+      backup-file: Backup file
+      schema-version: Schema version
+      exported-at: Exported at
+      select-all: Select all importable
+      clear-selection: Clear selection
+      selected-conflict-warning: '{count} selected items have conflict findings. Review them before importing.'
+      selected-safety-risk-warning: '{count} selected items have safety findings. They will be restored as secret review items.'
+      empty-backup: This backup file contains no memories.
+      empty: Empty
+      safety-risk: Safety risk
+      no-preview: No preview available
+    safety-findings:
+      prompt_injection: Prompt injection
+      credential: Credential
+      invisible_unicode: Invisible Unicode
+      local_path: Local path
+      raw_chat: Raw chat archive
+    backup-import:
+      title: Backup import result
+      description: Imported {imported} memories from backup, skipped {skipped}.
+      imported-items: Imported
+      skipped-items: Skipped
+      backup-file: Backup file
+      skipped-title: 'Skipped backup items: {count}'
+      no-skipped: No backup items were skipped.
+      skipped-item: 'Item {index}: {reason}'
+      reason:
+        empty_content: Empty content
+        not_selected: Not selected
+    backup-export:
+      title: Backup export
+      description: Exported {total} backup files for migration or restore.
+      output-dir: Output folder
+      total-memories: '{count} memories included in this backup export.'
+      empty-files: No backup files were exported.
+      memory-count: '{count} memories'
+    migration-readiness:
+      title: Migration readiness
+      description: Quick checklist for moving this AIRI memory workspace to another computer.
+      ready-count: '{ready}/{total} ready'
+      ready: Ready
+      missing: Needed
+      not-yet: Not generated yet
+      items:
+        active-memory:
+          title: Active memory
+          description: Review and activate the memories AIRI should carry to the next device.
+        memory-backup:
+          title: Memory backup JSON
+          description: Export a selectable JSON backup before copying machines.
+        llmwiki:
+          title: LLMWiki export
+          description: Generate Markdown knowledge files for RAG and local review.
+        obsidian:
+          title: Obsidian vault
+          description: Export the AIRI-Brain vault with navigation and manifest files.
+    export-preflight:
+      title: Export preflight
+      description: 'Checking {surface} before writing files.'
+      total: Checked
+      allowed: Allowed
+      blocked: Blocked
+      blocked-item: Blocked
+      empty-blocked: No blocked memories for this export surface.
+      surface:
+        public_profile: Public profile
+        lora_dataset: LoRA dataset
+      reasons:
+        not_active: Not active
+        sensitive_or_secret: Sensitive or secret
+        raw_chat_import: Raw chat import
+        unsafe_content: Unsafe content
+        missing_public_visibility: Missing public visibility marker
+        missing_training_visibility: Missing training visibility marker
+        demo_only: Demo-only profile
+    obsidian-export:
+      title: Obsidian export
+      description: Exported {total} files, including {inbox} inbox files for review.
+      output-dir: Output folder
+      manifest-title: Vault manifest
+      manifest-description: Machine-readable vault index for migration and future workspace checks.
+      navigation-title: Navigation files
+      navigation-description: Generated LLMWiki navigation entry points for Obsidian and local review.
+      empty-navigation: No navigation files were exported.
+      inbox-title: Review inbox files
+      empty-inbox: No review inbox files were exported.
+      memory-count: '{count} memories'
+    llmwiki-export:
+      title: LLMWiki export
+      description: Exported {total} LLMWiki Markdown files.
+      output-dir: Output folder
+      total-memories: '{count} memories included in this LLMWiki export.'
+      navigation-title: Navigation files
+      navigation-description: Generated LLMWiki entry points for local review and agent search.
+      empty-navigation: No LLMWiki navigation files were exported.
+      empty-files: No LLMWiki files were exported.
+      memory-count: '{count} memories'
+    public-profile-export:
+      title: Public profile export
+      description: Exported {total} public profile files.
+      output-dir: Output folder
+      total-memories: '{count} public-safe memories included.'
+      empty-files: No public profile files were exported.
+      memory-count: '{count} memories'
+    lora-dataset-export:
+      title: LoRA dataset export
+      description: Exported {total} LoRA candidate files.
+      output-dir: Output folder
+      total-records: '{count} training candidate records included.'
+      empty-files: No LoRA candidate files were exported.
+      record-count: '{count} records'
+    knowledge-import:
+      title: Knowledge import result
+      description: Imported {created} memories from {scanned} Markdown files.
+      empty-files: 'Empty files: {count}'
+      empty-file-title: 'Empty Markdown files: {count}'
+      no-empty-files: No empty Markdown files were skipped.
+      generated-title: 'AIRI-generated files skipped: {count}'
+      empty-generated: No AIRI-generated Markdown files were skipped.
+    chat-import:
+      title: Chat record import result
+      description: Imported {messages} messages from {files} chat record files.
+      created: 'Created memories: {count}'
+      empty-file-title: 'Empty files: {count}'
+      no-empty-files: No empty chat record files were skipped.
+      unsupported-file-title: 'Unsupported files: {count}'
+      no-unsupported-files: No unsupported chat record files were skipped.
+    lora-training-dry-run:
+      title: LoRA training dry run
+      description: Checks the exported LoRA package before a trainer reads it; sample content is not shown here.
+      passed: Passed
+      failed: Failed
+      candidates: Candidates
+      train: Train
+      eval: Eval
+      failed-checks: Failed checks
+      empty-failed: All dry-run checks passed.
+      contract-title: External script contract
+      artifacts-title: Training handoff files
+      success-schema: Success schema
+      success-checks: Success checks
+      error-format: Error format
+      validation-error-type: Validation error type
+      validation-error-exit-code: Validation error exit code
+      training-runbook-path: Training runbook
+      post-training-checklist-path: Post-training checklist
+    filters:
+      all: All
+      clean: No conflicts
+      duplicate: Possible duplicates
+      conflict: Possible conflicts
+      needs-review: Needs review
+      empty: No memories match this filter.
+    empty: No memories yet.
+    agent-chat-runtime:
+      title: Agent Chat Runtime
+      description: Configure the OpenAI-compatible model used by the memory-aware agent runtime.
+      restart-note: Saved changes apply to new agent runs immediately.
+      enabled-label: Enable runtime LLM
+      enabled-description: When disabled, the agent keeps using deterministic local responses.
+      target-label: Runtime target
+      target-description: Choose explicitly so memory privacy rules can be enforced.
+      base-url-label: Base URL
+      base-url-description: Ollama, LM Studio, vLLM, or any OpenAI-compatible endpoint.
+      base-url-placeholder: http://localhost:11434/v1
+      model-label: Model
+      model-description: 'Example: gemma3:4b, gemma-3-4b-it, or your provider model name.'
+      model-placeholder: gemma3:4b
+      api-key-label: API key
+      api-key-description: Optional for local runtimes; required by most cloud endpoints.
+      api-key-placeholder: Optional
+      test: Test connection
+      test-success: 'Connection test passed. Response: {response}'
+      test-failure: 'Connection test failed: {error}'
+      test-unknown-error: Unknown error
+      save: Save runtime config
+      privacy-note: Local target can use local and sensitive memory context. Cloud target only receives public memory context by design.
+      status:
+        disabled: Disabled
+        enabled-local: Enabled for local LLM
+        enabled-cloud: Enabled for cloud API
+        enabled: Enabled
+      target:
+        local:
+          label: Local LLM
+          description: Keep memory context on this device.
+        cloud:
+          label: Cloud API
+          description: Send only public memory context to a cloud API.
+    dream:
+      title: Local Dream Cycle
+      description: Let local Gemma summarize recent work into reviewable memory, routine, LLMWiki, and LoRA candidates.
+      start: Start local dream
+      cancel: Cancel
+      window-hours-label: Window hours
+      include-lora-candidates: Generate LoRA candidates
+      schedule-title: Local dream schedule
+      schedule-description: Periodically run local Gemma dream consolidation; generated candidates still require manual review.
+      schedule-enabled: Enable scheduled local dreams
+      schedule-interval-hours: Interval hours
+      schedule-window-hours: Window hours
+      schedule-include-lora-candidates: Generate scheduled LoRA candidates
+      save-schedule: Save schedule
+      trigger-schedule-now: Run scheduled dream now
+      schedule-active: Active
+      schedule-next-run: Next run
+      schedule-last-run: Last run
+      yes: Yes
+      no: No
+      none: None
+      session: Dream session
+      window-hours: 'Window: {hours}h'
+      summary: Summary
+      memory-candidates: 'Memory candidates: {count}'
+      routine-candidates: 'Routine candidates: {count}'
+      lora-candidates: 'LoRA candidates: {count}'
+      import-memory-candidates: Queue memory candidates
+      save-routine-candidates: Save routine candidates
+      import-lora-candidates: Queue LoRA candidates
+      withheld: 'Withheld: {count}'
+      withheld-reason:
+        secret_memory: Secret memory is never sent.
+        safety_risk: Unsafe memory is kept out of dream context.
+      redactions: 'Redactions: {count}'
+      empty: None yet.
+      no-tags: No tags
+      status:
+        idle: Idle
+        running: Running
+        completed: Completed
+        failed: Failed
+        cancelled: Cancelled
+    rag-preview:
+      title: RAG Context Preview
+      description: Inspect which memory and LLMWiki fragments would be sent or withheld for a local or cloud target.
+      query-label: Preview query
+      query-placeholder: What context should AIRI retrieve?
+      target-label: Target
+      memory-limit-label: Memory limit
+      llmwiki-limit-label: LLMWiki limit
+      preview: Preview context
+      fragments: 'Fragments: {count}'
+      withheld: 'Withheld: {count}'
+      score: 'Score: {score}'
+      empty-fragments: No fragments would be sent.
+      empty-withheld: Nothing withheld.
+      withheld-reason:
+        secret_memory: Secret memory is never sent.
+        safety_risk: Safety-risk memory is blocked from retrieval.
+        cloud_target_requires_public_memory: Cloud target only receives public memory.
+    evolution:
+      title: Memory Evolution
+      description: Preview Hermes-inspired maintenance suggestions before changing the Memory DB.
+      stale-before-label: Stale before
+      limit-label: Limit
+      include-low-priority: Include low-priority suggestions
+      preview: Preview evolution
+      suggestions: 'Suggestions: {count}'
+      empty: No evolution suggestions right now.
+      preview-note: Preview only. AIRI will not merge, archive, approve, reject, or reclassify memories automatically.
+      kind:
+        archive_stale: Archive stale memory
+        merge_duplicate: Merge duplicate memory
+        promote_candidate: Review candidate memory
+        review_conflict: Review conflict
+        tighten_privacy: Tighten privacy
+      priority:
+        high: High
+        medium: Medium
+        low: Low
+      actions:
+        approve: Approve
+        archive: Archive
+        edit: Edit
+        keep: Keep
+        merge: Merge
+        reclassify_secret: Mark secret
+        reject: Reject
+    llmwiki-search:
+      title: LLMWiki Search
+      description: Query the exported local Markdown knowledge layer and inspect snippets before they enter RAG.
+      query-label: Search query
+      query-placeholder: What should AIRI recall from LLMWiki?
+      limit-label: Limit
+      search: Search LLMWiki
+      input-dir: Input directory
+      result-summary: 'Scanned {files} Markdown files, matched {snippets} snippets.'
+      score: 'Score: {score}'
+      empty-no-files: No Markdown files were scanned yet. Export LLMWiki first, then search again.
+      empty-no-match: Markdown files were scanned, but no snippets matched this query.
+    computer-use:
+      title: Computer Use Safety
+      description: Preview desktop actions against the local safety policy before approved read/open execution.
+      refresh-policy: Refresh policy
+      refresh-audit: Refresh audit
+      mode: Mode
+      high-risk-kinds: High-risk kinds
+      allowed-read-roots: Allowed read roots
+      denied-roots: Denied roots
+      kind-label: Action kind
+      target-label: Target
+      target-placeholder: File path, folder path, or URL
+      command-label: Command
+      command-placeholder: pnpm test
+      cwd-label: Working directory
+      cwd-placeholder: Optional working directory
+      reason-label: Reason
+      reason-placeholder: Why should AIRI consider this action?
+      preview: Preview action
+      current-preview: Current preview
+      execute-approved: Execute approved action
+      execution-result: Execution result
+      risk: Risk
+      decision: Decision
+      requires-confirmation: Requires confirmation
+      can-execute: Can execute
+      audit-title: 'Audit entries: {count}'
+      empty-audit: No audit entries yet.
+      none: None
+      kind:
+        observe_screen: Observe screen
+        read_file: Read file
+        search_files: Search files
+        open_url: Open URL
+        open_path: Open path
+        write_file: Write file
+        delete_path: Delete path
+        move_path: Move path
+        run_command: Run command
+    routine-library:
+      title: Routine Library
+      description: Turn repeated workflows into local Markdown routines that the Agent can discover as tools.
+      draft-label: Routine draft text
+      draft-placeholder: Put one workflow step per line. The first line becomes the routine title.
+      draft: Draft routine
+      save: Save routine
+      refresh: Refresh routines
+      delete: Delete
+      saved: 'Saved routines: {count}'
+      steps: '{count} steps'
+      empty: No saved routines yet.
+    agent-console:
+      title: Agent Console
+      description: Run a memory-aware agent request and inspect how context, confirmation, and reflection behave.
+      input-label: Agent request
+      input-placeholder: Ask AIRI to recall a habit, summarize a project, or prepare a desktop action.
+      run: Run agent
+      cancel: Cancel
+      reflect: Reflect to memory
+      reflection-label: Reflection candidate
+      reflection-placeholder: Edit the response before storing it as a memory candidate.
+      status: Status
+      mode: Mode
+      run-id: Run ID
+      response: Response
+      context: Context
+      used-context: Used context
+      withheld-context: Withheld context
+      empty-context: None
+      pending-action: Pending action
+      approve-action: Approve
+      reject-action: Reject
+      no-run: No agent run yet.
+      recent-runs: Recent runs
+      tools: 'Tools available: {count}'
+  data:
+    title: Data
+    description: Manage stored AIRI data, exports, and resets
+    sections:
+      chats:
+        title: Chat sessions
+        description: Export or import saved chat sessions.
+        export: Export chats
+        import: Import chats
+        delete: Delete all chat sessions
+      models:
+        title: Models
+        description: Remove imported Live2D/VRM models.
+        delete: Delete all models
+      modules:
+        title: Modules
+        description: Reset module preferences and credentials.
+        reset: Reset module settings
+      providers:
+        title: Providers
+        description: Reset all provider settings and credentials.
+        reset: Reset provider settings
+      danger:
+        title: Danger zone
+        description: Irreversible actions. Export what you need before continuing.
+      all:
+        title: Delete all data
+        description: Wipe every local setting, provider config, and model.
+        delete: Delete all data
+      desktop-folder:
+        title: Open app data folder
+        description: Open AIRI's data folder in your file manager.
+        open: Open folder
+      desktop:
+        title: Reset desktop settings & states
+        description: Clear AIRI desktop settings and runtime state.
+        reset: Reset desktop data
+    confirmations:
+      tooltip: Are you sure?
+      'yes': 'Yes'
+    status:
+      exported: Chat sessions exported.
+      imported: Chat sessions imported.
+      import_error: Failed to import chat sessions. Please check the file format.
+      chats_deleted: Chat sessions deleted.
+      models_deleted: Models deleted.
+      modules_reset: Module settings reset.
+      providers_reset: Provider settings reset.
+      all_deleted: All local data deleted.
+      desktop_reset: Desktop data reset.
+  models:
+    description: Live2D, VRM, etc.
+    title: Models
+    sections:
+      section:
+        live2d:
+          title: Live2D
+          description: Configure Live2D models and settings
+        vrm:
+          title: VRM
+          description: Configure 3D VRM models and settings
+        scene: Scene
+  modules:
+    beat_sync:
+      description: Vibe with beats from the audio source
+      title: Beat Sync
+      sections:
+        audio_source:
+          actions:
+            start_screen_capture: Start screen capture
+            stop: Stop
+          description: Select an audio source to detect beats from.
+          title: Audio source
+        beat_visualizer:
+          title: Beat visualizer
+        parameters:
+          advanced_parameters: Advanced Parameters
+          description: Tweak the beat detection parameters.
+          title: Parameters
+          parameters:
+            adaptive_threshold:
+              description: >-
+                Whether to apply adaptive thresholds based on signal variance
+                over time.
+              label: Adaptive threshold
+            buffer_duration:
+              description: Duration of the internal analysis buffer.
+              label: Buffer duration
+            envelope_filter_frequency:
+              description: >-
+                Frequency for the envelope filter applied to smooth energy
+                changes.
+              label: Envelope filter frequency
+            highpass_filter_frequency:
+              description: >-
+                Frequency for the highpass filter applied to reduce low
+                frequencies like sub-bass noises.
+              label: Highpass filter frequency
+            lowpass_filter_frequency:
+              description: >-
+                Frequency for the lowpass filter applied to reduce high
+                frequencies like vocals.
+              label: Lowpass filter frequency
+            min_beat_interval:
+              description: Maximum BPM or minimum interval between detected beats.
+              label: Max BPM / Min beat interval
+            sensitivity:
+              label: Sensitivity
+            spectral_flux:
+              description: Whether to enable spectral flux-based onset detection.
+              label: Spectral flux
+            warmup:
+              description: Whether to warm up before detecting beats for better accuracy.
+              label: Warmup
+    consciousness:
+      description: Personality, desired model, etc.
+      sections:
+        section:
+          provider-model-selection:
+            collapse: Collapse
+            custom_model_placeholder: Enter custom model name...
+            current_model_label: 'Current model:'
+            description: Select the suitable LLM provider for consciousness
+            error: Error loading models
+            health_check_failed: Health check failed
+            no_providers_configured_title: No Providers Configured
+            no_providers_configured_description: Click here to set up your LLM providers
+            expand: Expand
+            loading: Loading available models...
+            manual_model_name: Model Name
+            manual_model_placeholder: Enter the model name to use with this provider
+            no_models: No models available
+            no_models_description: No models were found for this provider
+            no_search_results: No matching models
+            no_search_results_description: No models match '{query}'. Try a different search term.
+            not_supported: Model listing not supported
+            not_supported_description: This provider doesn't support model listing functionality
+            search_placeholder: Search models...
+            search_results: Found {count} of {total} models
+            show_less: Show less
+            show_more: Show more
+            subtitle: Select a default model from the provider
+            title: Model
+      title: Consciousness
+    description: Thinking, vision, speech synthesis, gaming, etc.
+    gaming-factorio:
+      description: Playing Factorio!
+      title: Factorio
+      enable: Enable Factorio Integration
+      enable-description: Allow AIRI to interact with Factorio game
+      server-address: Server Address
+      server-address-description: The IP address or hostname of the Factorio server
+      server-address-placeholder: Enter server address (e.g., localhost or 192.168.1.100)
+      server-port: Server Port
+      server-port-description: The port number of the Factorio server (default 34197)
+      username: Username
+      username-description: Your username in the Factorio server
+      username-placeholder: Enter your Factorio username
+      configured: Factorio is properly configured!
+    gaming-minecraft:
+      description: Playing Minecraft!
+      title: Minecraft
+      enable: Enable Minecraft Integration
+      enable-description: >-
+        Include Minecraft self-knowledge in Stage chat turns and keep passive
+        runtime visibility enabled.
+      configured: Minecraft is properly configured!
+      read-only:
+        title: Read-only shell
+        description: >-
+          Stage currently exposes Minecraft as a passive shell. Runtime status
+          and traffic are visible here, but service configuration stays in the
+          Minecraft service files.
+      setup:
+        title: Setup
+        description: >-
+          You can find the instructions for setting up the bot in the following
+          file
+      runtime:
+        title: Observed runtime
+        connection: Connection
+        latest-context: Latest bot context
+        waiting: Waiting for a fresh bot-originated context push.
+        unknown: Unknown
+      debug:
+        title: Minecraft traffic
+        empty: No Minecraft traffic observed yet.
+        source: 'Source: {source}'
+      status:
+        service-online: Service online
+        service-offline: Service offline
+        no-runtime-context: No bot context observed yet
+        last-context-seconds: 'Last bot context: {seconds}s ago'
+        last-context-stale: 'Last bot context: Stale'
+    hearing:
+      description: Configure how speech recognition works
+      title: Hearing
+      sections:
+        section:
+          provider-selection:
+            description: Select the suitable speech recognition provider
+          confidence-threshold:
+            title: Confidence Threshold
+            description: >-
+              Filter out low-confidence transcriptions to reduce Whisper
+              hallucinations. Values closer to 0 are more strict; drag to the
+              leftmost to disable. Only effective for providers supporting
+              Whisper API (e.g., OpenAI, Groq).
+            disabled: Disabled
+            verbose-json-note: >-
+              Note: If your provider does not support verbose_json responses,
+              this setting will have no effect.
+            verbose-json-unsupported: >-
+              Your provider did not return verbose_json segments. Confidence
+              filtering had no effect on the last transcription.
+    memory-long-term:
+      description: Long-term memory specific settings and management
+      title: Long-Term Memory
+    memory-short-term:
+      description: Short-term memory specific settings and management
+      title: Short-Term Memory
+    messaging-discord:
+      description: Chat & voice chat over Discord
+      title: Discord
+      enable: Enable Discord Integration
+      enable-description: Allow AIRI to interact through Discord
+      token: Bot Token
+      token-description: Your Discord bot token
+      token-placeholder: Enter your Discord bot token
+      configured: Discord is properly configured!
+    speech:
+      description: Speech synthesis
+      sections:
+        section:
+          playground:
+            buttons:
+              stop:
+                label: Stop
+            select-voice:
+              loading: Loading model...
+              required: Please select a voice
+          provider-voice-selection:
+            custom_model_placeholder: Enter custom model name...
+            custom_voice_placeholder: Enter custom voice ID...
+            description: Select the suitable speech provider
+            no_models: No models available
+            no_models_description: No models were found for this provider
+            no_voices: No voices available
+            no_voices_description: No voices were found for this provider
+            no_voices_hint: You can enter a custom voice name below.
+            pause: Pause
+            play_sample: Play Sample
+            search_models_placeholder: Search models...
+            search_models_results: Found {count} of {total} models
+            search_voices_placeholder: Search voices...
+            search_voices_results: Found {count} of {total} voices
+            unsupported_voice_warning_title: No supported voices
+            unsupported_voice_warning_content: >-
+              Try a different model or provider. We are working on supporting
+              all the voice for this model as quickly as possible. If you need
+              it urgently, please let us know on GitHub at
+              https://github.com/moeru-ai/airi/issues.
+            show_less: Show less
+            show_more: Show more
+            title: Provider
+          voice-settings:
+            input-ssml:
+              placeholder: Enter SSML text...
+            use-ssml:
+              description: Enable to input raw SSML instead of plain text
+              label: Use Custom SSML
+      title: Speech
+    title: Modules
+    vision:
+      description: Vision
+      title: Vision
+    x:
+      description: X / Twitter browsing and usage
+      title: X / Twitter
+      enable: Enable X / Twitter Integration
+      enable-description: Allow AIRI to interact with X / Twitter
+      api-key: API Key
+      api-key-description: Your X / Twitter API key
+      api-key-placeholder: Enter your X / Twitter API key
+      api-secret: API Secret
+      api-secret-description: Your X / Twitter API secret
+      api-secret-placeholder: Enter your X / Twitter API secret
+      access-token: Access Token
+      access-token-description: Your X / Twitter access token
+      access-token-placeholder: Enter your X / Twitter access token
+      access-token-secret: Access Token Secret
+      access-token-secret-description: Your X / Twitter access token secret
+      access-token-secret-placeholder: Enter your X / Twitter access token secret
+      configured: X / Twitter is properly configured!
+    mcp-server:
+      description: Connect and manage MCP server and tools
+      title: MCP Server
+      config-path: Config file path
+      runtime-title: Runtime status
+      actions:
+        open-config: Open mcp.json
+        apply-and-restart: Save and restart stdio MCP
+      messages:
+        opened: Config file opened at {path}
+        restarted: >-
+          MCP servers restarted. Started {started}, failed {failed}, skipped
+          {skipped}
+  flux:
+    title: Flux
+    buy: Charge
+    description: Current Flux
+    packagesError: Failed to load packages. Please try again later.
+    checkout:
+      success: Payment successful! Your Flux has been topped up.
+      canceled: Payment was canceled.
+      error: Something went wrong. Please try again later.
+    audit:
+      title: Transaction History
+      time: Time
+      type: Type
+      detail: Detail
+      amount: Amount
+      typeAddition: Top-up
+      typeConsumption: Usage
+      typeInitial: Initial Grant
+      loading: Loading history...
+      empty: No transaction records yet.
+      loadMore: Load More
+      delayHint: Usage records may be delayed by up to 1 minute
+    packages:
+      title: Flux Packages
+      buy: Charge
+      description: Flux packages to choose from.
+  providers:
+    explained:
+      chat: Text generation model providers. e.g. OpenRouter, OpenAI, Ollama.
+      Speech: Speech (text-to-speech) model providers. e.g. ElevenLabs, Azure Speech.
+      Transcription: >-
+        Transcription (speech-to-text) model providers. e.g. Whisper.cpp,
+        OpenAI, Azure Speech
+    helpinfo:
+      title: First time here?
+      description: >
+        AIRI requires at least one {chat} provider to be configured to think,
+        and behave properly. You could think of it as the brain of the
+        characters living in AIRI system.
+    catalog:
+      edit:
+        config-id-not-found: Provider configuration not found.
+        definition-id-not-found: Provider definition not found.
+        actions:
+          more-options: More options
+          delete: Delete
+        validation:
+          failed:
+            title: Please check your provider settings, validation failed.
+            description: >-
+              You can still save the current configuration if you want to
+              proceed.
+            action: Save anyway
+        config:
+          common:
+            fields:
+              field:
+                api-key:
+                  label: API Key
+                  description: API Key used to authorize requests to this provider
+                  placeholder: sk-...
+                base-url:
+                  label: Base URL
+                  description: >-
+                    The base url used to connect to remote service. Often looks
+                    like http://localhost:11434/v1 or https://example.com/v1.
+                  placeholder: Base url...
+                headers:
+                  label: Custom HTTP Headers
+                  description: Add custom HTTP headers
+                  key:
+                    placeholder: Key
+                  value:
+                    placeholder: Value
+                thinking-mode:
+                  label: Thinking Mode
+                  description: >
+                    Controls Ollama thinking behavior. GPT-OSS only supports
+                    low/medium/high levels.
+                  options:
+                    auto: Auto (provider default)
+                    disable: Disable
+                    enable: Enable
+                    low: Low
+                    medium: Medium
+                    high: High
+        validators:
+          actions:
+            validate: Validate
+          empty: No validation steps available.
+          openai-compatible:
+            check-config:
+              title: Configuration
+            check-connectivity:
+              title: Connectivity
+            check-supports-model-listing:
+              title: List Models
+            check-supports-chat-completion:
+              title: Chat Completion
+          status:
+            validating: Validating...
+            valid: Passed
+            invalid: Errored
+          title: Checks
+        providers:
+          provider:
+            ollama:
+              troubleshooting:
+                validators:
+                  openai-compatible-check-connectivity:
+                    label: Extra configuration needed for Ollama
+                    content: >-
+                      Sorry to hear that Connectivity check failed for Ollama.
+                      Don't worry, for Ollama instances, extra configuration is
+                      needed for making it pass for Ollama. You need to set
+                      <code>OLLAMA_HOST</code> explicitly when start the Ollama
+                      application or Ollama CLI server, for detailed
+                      information, check <a
+                      href="https://airi.moeru.ai/docs/en/docs/manual/integrations/providers/chat/ollama">Ollama
+                      integration guide</a>.
+    common:
+      continueAnyway: Continue Anyway
+      goToModelSelection: Select Model →
+      fields:
+        field:
+          api-key:
+            label: API Key Input
+      section:
+        advanced:
+          fields:
+            field:
+              headers:
+                description: Add custom HTTP headers
+                key:
+                  placeholder: Key
+                label: HTTP Headers
+                value:
+                  placeholder: Value
+          title: Advanced
+        basic:
+          description: Essential settings
+          title: Basic
+        voice:
+          title: Voice Settings
+    description: LLMs, speech providers, etc.
+    provider:
+      app-local-audio-transcription:
+        title: App (Local)
+        description: https://github.com/moeru-ai/xsai-transformers
+      app-local-audio-speech:
+        title: App (Local)
+        description: https://github.com/moeru-ai/xsai-transformers
+      browser-local-audio-transcription:
+        title: Browser (Local)
+        description: https://github.com/moeru-ai/xsai-transformers
+      browser-local-audio-speech:
+        title: Browser (Local)
+        description: https://github.com/moeru-ai/xsai-transformers
+      alibaba-cloud-model-studio:
+        description: bailian.console.aliyun.com
+        title: Alibaba Cloud Model Studio
+      anthropic:
+        description: anthropic.com
+        title: Anthropic | Claude
+        helpinfo:
+          title: Before you start
+          description:
+            part1: >-
+              While Anthropic recently did announce that they are having a beta
+              support for OpenAI SDK compatibility
+            part2: (you can read more here)
+            part3: but due to the implementation details comes with
+            part4: >-
+              restrictions which not aligned with the OpenAI SDK, it's currently
+              not possible to use this provider in the browser.
+            part5: >-
+              If you do need to use this provider, you will need a dedicated
+              proxy backend like a Serverless Function running on
+            part6: or some CORS bypassing services to bypass the CORS restrictions.
+      cloudflare-workers-ai:
+        description: cloudflare.com
+        fields:
+          field:
+            account-id:
+              description: Cloudflare Account ID
+              label: Account ID
+              placeholder: Your Cloudflare Account ID
+            api-key:
+              placeholder: Input Cloudflare API Key
+        title: Cloudflare Workers AI
+      common:
+        status:
+          validating: Validating
+          valid: Configuration seems to be valid.
+        fields:
+          field:
+            pitch:
+              description: Tune the pitch of synthesized speech (e.g., sharper or coarser)
+              label: Pitch
+            speed:
+              description: Adjust the speed of speech
+              label: Speed
+            volume:
+              description: Adjust the volume of speech
+              label: Volume
+      deepgram-tts:
+        description: deepgram.com
+        title: Deepgram
+      speech-noop:
+        title: None
+        description: No speech output.
+      deepseek:
+        description: deepseek.com
+        title: DeepSeek
+      elevenlabs:
+        description: elevenlabs.io
+        fields:
+          field:
+            simularity-boost:
+              description: Voice similarity adherence
+              label: Similarity Boost
+            speaker-boost:
+              description: Enhance speaker similarity
+              label: Speaker Boost
+            speed:
+              description: Speech generation speed
+              label: Speed
+            stability:
+              description: Voice stability and randomness
+              label: Stability
+            style:
+              description: Voice style exaggeration
+              label: Style
+        playground:
+          buttons:
+            button:
+              test-voice:
+                generating: Generating...
+                label: Test Voice
+          fields:
+            field:
+              input:
+                placeholder: Enter text to test the voice...
+              language:
+                description: Select voice language
+                label: Language
+              voice:
+                description: Select preferred voice
+                label: Voice
+          title: Voice Playground
+          validation:
+            error-missing-api-key: Please enter an API key to test the voice.
+        title: ElevenLabs
+      kokoro-local:
+        description: Local text-to-speech using Kokoro-82M.
+        fields:
+          field:
+            model:
+              label: Model Selection
+              description: Smaller models load faster but may have slightly lower quality.
+        models:
+          fp32-webgpu:
+            description: >-
+              Full precision model using WebGPU - Recommended for supported
+              devices
+          fp32:
+            description: Full precision model
+          fp16:
+            description: Half precision
+          q8:
+            description: 8-bit quantized
+          q4:
+            description: 4-bit quantized
+          q4f16:
+            description: 4-bit with FP16
+        playground:
+          default-text: Hello! This is a test of the Kokoro text-to-speech system.
+          title: Voice Playground
+        title: Kokoro TTS (Local)
+      gpt-sovits-tts:
+        description: Local GPT-SoVITS text-to-speech server with voice cloning.
+        fields:
+          field:
+            base-url:
+              label: Base URL
+              description: GPT-SoVITS API server address.
+            ref-audio-path:
+              label: Reference Audio Path
+              description: >-
+                Absolute path to the reference audio file on the GPT-SoVITS
+                server (e.g. E:\models\character\ref.wav).
+            prompt-text:
+              label: Prompt Text
+              description: Transcript of the reference audio.
+            prompt-lang:
+              label: Prompt Language
+              description: Language of the reference audio transcript.
+            text-lang:
+              label: Text Language
+              description: Language of the text to synthesize.
+            speed:
+              label: Speed
+              description: Speech speed multiplier (0.5 - 2.0).
+            streaming-mode:
+              label: Streaming Mode
+              description: Enable streaming audio for lower latency.
+        playground:
+          default-text: Hello! This is a test of GPT-SoVITS text-to-speech.
+          title: Voice Playground
+        title: GPT-SoVITS (Local)
+      faster-whisper-local:
+        description: Local faster-whisper STT server. Supports CPU/GPU switching.
+        fields:
+          field:
+            status:
+              online: Server Online
+              offline: Server Offline
+              checking: Checking...
+            model:
+              label: Model
+              description: Whisper model to use for transcription.
+            device:
+              label: Device
+              description: >-
+                CPU mode saves VRAM for LLM. GPU mode is faster but uses ~1GB VRAM.
+                Switching reloads the model (takes a few seconds).
+        title: Faster Whisper (Local)
+      paraformer-local:
+        description: Local Paraformer (FunASR) STT server. Optimized for Chinese.
+        fields:
+          field:
+            status:
+              online: Server Online
+              offline: Server Offline
+              checking: Checking...
+            model:
+              label: Model
+            device:
+              label: Device
+              description: >-
+                CPU mode saves VRAM for LLM. GPU mode is faster.
+                Switching reloads the model (takes a few seconds).
+        title: Paraformer (Local)
+      fireworks:
+        description: fireworks.ai
+        title: Fireworks.ai
+      microsoft-speech:
+        description: speech.microsoft.com
+        fields:
+          field:
+            region:
+              description: Speech Service region
+              label: Region
+        title: Microsoft / Azure Speech
+      index-tts-vllm:
+        description: https://index-tts.github.io/
+        title: Bilibili / IndexTTS
+        callout_indextts2_unavailable_title: Limited Support
+        callout_indextts2_unavailable: Support for IndexTTS2 is currently unavailable. Please use IndexTTS.
+      azure-ai-foundry:
+        description: Azure AI Foundry
+        title: Azure AI Foundry
+      minimax:
+        description: minimaxi.com
+        title: MiniMax
+      minimax-global:
+        description: minimax.io
+        title: MiniMax Global
+      mistral:
+        description: mistral.ai
+        title: Mistral
+      moonshot:
+        description: moonshot.ai
+        title: Moonshot AI
+      modelscope:
+        description: modelscope.cn
+        title: ModelScope
+      novita:
+        description: novita.ai
+        title: Novita
+      ollama:
+        description: ollama.ai
+        title: Ollama
+      openai:
+        description: openai.com
+        title: OpenAI
+      azure-openai:
+        description: Azure OpenAI API
+        title: Azure OpenAI
+      openai-compatible:
+        description: OpenAI Compatible
+        title: OpenAI Compatible
+      nvidia:
+        description: build.nvidia.com
+        title: NVIDIA NIM
+      n1n:
+        description: n1n.ai - High-performance AI API provider.
+        title: n1n
+      openrouter:
+        description: openrouter.ai
+        title: OpenRouter
+      openrouter-audio-speech:
+        description: openrouter.ai
+        title: OpenRouter
+      perplexity:
+        description: perplexity.ai
+        title: Perplexity
+      player2:
+        description: player2.game
+        title: Player2
+      together:
+        description: together.ai
+        title: Together.ai
+      google-generative-ai:
+        description: gemini.google.com
+        title: Google Gemini
+      groq:
+        description: groq.com
+        title: Groq
+      featherless:
+        description: featherless.ai
+        title: Featherless AI
+      lm-studio:
+        description: lmstudio.ai
+        title: LM Studio
+      vllm:
+        description: vllm.ai
+        title: vLLM
+      volcengine:
+        description: volcengine.com
+        fields:
+          field:
+            appId:
+              description: App ID of the project where you can obtain in Console
+              label: App ID
+        title: Volcano Engine
+      xai:
+        description: x.ai
+        title: xAI
+      zai:
+        description: z.ai
+        title: Z.ai
+      302-ai:
+        description: 302.AI
+        title: 302.AI
+      comet-api:
+        description: CometAPI.com
+        title: Comet API
+      cerebras:
+        description: cerebras.ai
+        title: Cerebras
+      aliyun-nls:
+        description: Aliyun NLS
+        title: Aliyun NLS
+      browser-web-speech-api:
+        description: Browser-native STT (requires Chrome/Edge/Safari)
+        title: Web Speech API
+      official:
+        title: Official Provider
+        description: Official AI provider by AIRI.
+        speech-title: Official Speech Provider
+        speech-description: Official text-to-speech provider by AIRI.
+        transcription-title: Official Transcription Provider
+        transcription-description: Official speech-to-text provider by AIRI.
+      transcriptions:
+        playground:
+          title: Transcription Playground
+      aihubmix:
+        title: AIHubMix
+        description: https://aihubmix.com (10% off)
+    title: Providers
+  connection:
+    description: Configure WebSocket server connection
+    title: Connection
+    websocket-url:
+      description: Full address of the WebSocket server (e.g., ws://localhost:6121/ws)
+      label: WebSocket Server Address
+      placeholder: ws://localhost:6121/ws
+    server-hostname:
+      label: Expose On Network
+      description: >-
+        Choose whether the AIRI gateway only listens on this device or can be
+        reached from your local network.
+      advanced-label: Bind Hostname
+      advanced-description: >-
+        Use a specific hostname or IP address when you need manual network
+        binding.
+      options:
+        this-device: This device
+        all: All
+        advanced: Advanced
+    server-auth-token:
+      label: Auth Token
+      description: >-
+        Security token required by remote clients that connect to this gateway.
+        When left empty, AIRI generates a new token automatically.
+      placeholder: Auto-generate
+    qr:
+      title: Connect from Stage Pocket
+      description: >-
+        Scan this QR code from Stage Pocket to try all reachable local network
+        addresses and save the first working one.
+      refresh: Refresh
+      image-alt: AIRI server channel connection QR code
+      candidates: Candidate addresses
+      token-hint: >-
+        The QR code includes the auth token so Stage Pocket can authenticate
+        after connecting. Do not share it publicly.
+      errors:
+        title: QR code unavailable
+        unavailable: Failed to prepare the connection QR code.
+    qr-scan:
+      title: Quick Connect
+      description: Scan the QR code from Tamagotchi to quick connect
+      instructions: Point the camera at the AIRI connection QR code.
+      action: Scan
+      success:
+        title: Connected address saved
+        description: 'URL been used: {url}'
+      errors:
+        title: QR scan failed
+        failed: Failed to scan or connect with the QR code.
+  scene:
+    description: Configure the environment where the character lives
+    title: Scene
+  system:
+    color-scheme:
+      description: Change the color scheme of the stage.
+      title: Color Scheme
+    developer:
+      description: Some developer options.
+      title: Developers
+    general:
+      description: Dark theme, languages, etc.
+      title: General
+    description: Customize your stage!
+    sections:
+      section:
+        custom-color:
+          fields:
+            field:
+              primary-color:
+                label: Primary color
+                rgb-on:
+                  title: I Want It Dynamic!
+          title: Color Scheme
+        developer:
+          title: Developer
+          sections:
+            section:
+              performance-visualizer:
+                title: Performance Visualizer
+                description: Toggle FPS/long task/memory overlay
+              markdown-stress:
+                title: Markdown Stress
+                description: Stress markdown parsing and rendering with heavy chat payloads
+              use-magic-keys:
+                title: useMagicKeys Tool
+                description: Test shortcuts
+              audio-record:
+                title: Audio Record
+                description: Test Audio related composables
+              background-gradient-blending:
+                title: Background Theme color blending
+                description: Test blending & theme
+              background-removal:
+                title: Background removal (WebGPU required)
+                description: Utility for background removal
+              chat:
+                title: Chat
+                description: Chat
+              gesture-circle:
+                title: Gesture Circle (Desktop only)
+                description: Test gesture recognition
+              image:
+                title: Image
+                description: Image
+              polaroid:
+                title: Polaroid
+                description: Utility for taking shots of models
+              context-flow:
+                description: >-
+                  Inspect incoming context updates and outgoing chat stream
+                  events
+              websocket-inspector:
+                title: WebSocket Inspector
+                description: Inspect raw WebSocket traffic
+              vibrant:
+                title: Color extract
+                description: Test color extraction
+              providers-transcription-realtime-aliyun-nls:
+                title: Aliyun Real-time Transcriber
+                description: >-
+                  Stream microphone audio to Aliyun NLS and inspect live
+                  transcripts
+              performance-playground:
+                title: Performance Playground
+                description: VRM expressions + TTS lip sync playground
+        theme-presets:
+          presets:
+            default:
+              colors:
+                color-1: AIRI Green
+              description: The default greenish theme color, brought by AIRI to you!
+              title: Default Color
+            morandi:
+              colors:
+                color-1: Taupe
+                color-2: Beige
+                color-3: Ash Grey
+                color-4: Light Taupe
+                color-5: Ivory
+                color-6: Olive Grey
+                color-7: Sand
+                color-8: Warm Grey
+              description: Soft, muted tones inspired by Giorgio Morandi's paintings
+              title: Morandi Colors
+            monet:
+              colors:
+                color-1: Sky Blue
+                color-2: Mist
+                color-3: Sand
+                color-4: Moss Green
+                color-5: Water Lily
+                color-6: Wheat
+                color-7: Slate Blue
+                color-8: Sage
+              description: Impressionist palette inspired by Claude Monet's works
+              title: Monet Colors
+            japanese:
+              colors:
+                color-1: Tan
+                color-2: Warm Taupe
+                color-3: Umber
+                color-4: Coffee
+                color-5: Bronze
+                color-6: Gold
+                color-7: Mustard
+                color-8: Amber
+              description: Traditional Japanese color palette
+              title: Japanese Colors
+            nordic:
+              colors:
+                color-1: Nordic Blue
+                color-2: Ice
+                color-3: Fjord
+                color-4: Steel
+                color-5: Glacier
+                color-6: Slate
+                color-7: Cloud
+                color-8: Stone
+              description: Scandinavian minimalist color scheme
+              title: Nordic Colors
+            chinese:
+              colors:
+                color-1: Rosy Dawn
+                color-2: Chinese Red
+                color-3: Smoky Brown
+                color-4: Bamboo Green
+                color-5: Dark Purple
+                color-6: Golden Yellow
+                color-7: Azure Blue
+                color-8: Ochre
+              description: >-
+                Traditional Chinese colors, derived from ancient textiles,
+                porcelain and paintings
+              title: Chinese Traditional Colors
+          title: Color Scheme Presets
+    title: System
+  page:
+    developers:
+      open-devtools:
+        title: Open Developer Tools
+        button: Open
+  credits:
+    buy: Buy
+sections:
+  section:
+    general:
+      title: General
+theme:
+  title: Theme
+  description: |
+    Switch the base theme of AIRI, Light mode or Dark mode.
+title: Settings
+voices: Voice
+vrm:
+  render-scale:
+    title: Render scale
+  change-model:
+    from-file: Load from File
+    from-file-select: Select
+    from-url: Load from URL
+    from-url-confirm: Load
+    from-url-placeholder: Enter VRM model URL
+    title: Change Model
+  title: VRM Settings
+  scale-and-position:
+    model-info-title: Model Size Information
+    model-info-x: Width (X)
+    model-info-y: Height (Y)
+    model-info-z: Depth (Z)
+    tips: |
+      Edit the initial position the VRM model.
+      Coordinate axes are visualised.
+    scale: Scale
+    x: X Offset
+    'y': Y Offset
+    z: Z Offset
+    fov: FOV (degree)
+    rotation-y: Rotation (Y-axis)
+    camera-distance: Camera distance
+    eye-tracking-mode:
+      title: Looking at
+      options:
+        option:
+          camera: Camera
+          mouse: Mouse
+          disabled: Disabled
+  switch-to-vrm:
+    title: Switch to Live2D Avatar?
+    change-to-vrm: Click here to switch to the Live2D avatar setting
+  theme-color-from-model:
+    button-extract:
+      title: Extract
+  skybox:
+    skybox-intensity: SkyBox Intensity
+    skybox-specular-mix: Specular Mix
+websocket-secure-enabled:
+  title: Enable Secure WebSocket (WSS)
+  description: >-
+    Enable WSS (WebSocket Secure) to allow HTTPS connections for mobile (pocket)
+    in development mode. This will automatically generate a self-signed
+    certificate.
+wip:
+  title: Work in Progress
+  description: >-
+    This feature is currently under development and not yet publicly available.
+    Check back in future updates for this functionality.
