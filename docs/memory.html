@@ -29,7 +29,7 @@
         <p class="lead">AIRI Gemma 的长期记忆系统以 GBrain 为核心，把 LLMWiki、Obsidian、Hermes 记忆治理、Claude / Codex 协作整理和本地 Memory DB 串成一套可审查、可迁移、可进化的个人知识库。</p>
         <div class="actions">
           <a class="button primary" href="#stack">技术栈</a>
-          <a class="button" href="#evolution">记忆进化</a>
+          <a class="button" href="#dual-brain">双脑系统</a>
         </div>
       </div>
       <aside class="memory-visual">
@@ -56,6 +56,29 @@
           <article class="module"><div class="icon coral">H</div><h3>Hermes 记忆治理</h3><p>借鉴 Hermes 的 MEMORY / USER 摘要、外部 Memory Provider、容量治理、纠错和工具化记忆操作。</p></article>
           <article class="module"><div class="icon mint">C</div><h3>Claude / Codex 协作</h3><p>用于整理文档、审查候选记忆、生成知识库 diff 和维护工程任务，但私有事实仍由本地记忆库与用户确认控制。</p></article>
           <article class="module"><div class="icon violet">M</div><h3>Memory DB 事实源</h3><p>PGlite / 本地 Memory Service 保存 active、needs_review、privacy、importance、accessCount 等结构化状态。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="dual-brain">
+      <div class="wrap panel reveal">
+        <div class="section-head">
+          <div>
+            <span class="tag">Dual Brain System</span>
+            <h2>双脑系统：即时反应脑 + 长期记忆脑</h2>
+          </div>
+          <p>双脑系统是 AIRI 记忆架构里最关键的表达：一个脑负责当下互动，一个脑负责长期知识和人格连续性，中间由安全载入层决定什么能进入本轮上下文。</p>
+        </div>
+        <div class="grid-3">
+          <article class="module"><div class="icon mint">01</div><h3>即时反应脑</h3><p>处理当前对话、语音、视觉、桌面舞台状态和角色反馈，保证 AIRI 在使用时能快速回应、保持情绪和动作连续。</p></article>
+          <article class="module"><div class="icon gold">02</div><h3>长期记忆脑</h3><p>由 GBrain、Memory DB、LLMWiki 和 Obsidian vault 组成，保存用户画像、项目状态、长期偏好、边界规则和可复用知识。</p></article>
+          <article class="module"><div class="icon violet">03</div><h3>安全载入闸门</h3><p>每轮只把命中的有限摘要和安全片段载入上下文；secret、sensitive、prompt injection 和不适合云端的内容会被 withheld。</p></article>
+        </div>
+        <div class="wiki-flow" style="margin-top:16px">
+          <article class="wiki-pill"><b>快反应</b><span>适合当前任务、当前语气、舞台反馈和短期上下文，不承担完整历史记忆。</span></article>
+          <article class="wiki-pill"><b>长记忆</b><span>负责跨会话连续性，让 AIRI 不必每次重新认识用户和项目。</span></article>
+          <article class="wiki-pill"><b>按需载入</b><span>不是把全部历史塞进 prompt，而是根据本轮任务检索、过滤、压缩后载入。</span></article>
+          <article class="wiki-pill"><b>可解释</b><span>能追踪使用了哪些记忆、为什么使用、哪些内容被拦截，方便审查和纠错。</span></article>
         </div>
       </div>
     </section>
