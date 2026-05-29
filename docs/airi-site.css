@@ -204,6 +204,97 @@ h2 { margin: 16px 0 0; font-size: clamp(30px, 4vw, 52px); line-height: 1.04; }
   background: rgba(255, 255, 255, 0.82);
   padding: 26px;
 }
+.memory-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.86fr) minmax(360px, 0.76fr);
+  gap: 34px;
+  align-items: center;
+}
+.memory-visual {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.74);
+  box-shadow: var(--shadow);
+}
+.memory-visual img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-bottom: 1px solid var(--line);
+}
+.memory-caption { padding: 18px; color: var(--muted); line-height: 1.7; }
+.memory-band {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1fr);
+  gap: 26px;
+  align-items: start;
+}
+.memory-band p { color: var(--muted); line-height: 1.8; }
+.brain-board {
+  display: grid;
+  gap: 14px;
+}
+.brain-node {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.82);
+  padding: 20px;
+}
+.brain-node small {
+  display: block;
+  margin-bottom: 8px;
+  color: #137a59;
+  font-weight: 900;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+.brain-node h3 { margin: 0 0 8px; font-size: 22px; }
+.brain-node p { margin: 0; color: var(--muted); line-height: 1.7; }
+.wiki-flow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+.wiki-pill {
+  min-height: 150px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(245, 251, 247, 0.92));
+  padding: 18px;
+}
+.wiki-pill b { display: block; margin-bottom: 10px; font-size: 18px; }
+.wiki-pill span { color: var(--muted); line-height: 1.65; }
+.memory-steps {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+.step {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.78);
+  padding: 18px;
+  min-height: 170px;
+}
+.step strong {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  margin-bottom: 14px;
+  color: #fff;
+  background: var(--mint);
+}
+.step h3 { margin: 0 0 8px; font-size: 18px; }
+.step p { margin: 0; color: var(--muted); line-height: 1.65; }
+.evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.evidence-grid .card img { object-fit: cover; }
 .body { padding: 18px; }
 .body h3, .module h3 { margin: 0 0 8px; font-size: 20px; }
 .body p, .module p { margin: 0; color: var(--muted); line-height: 1.65; }
@@ -222,7 +313,7 @@ footer { border-top: 1px solid var(--line); padding: 38px 0; color: var(--muted)
 
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
 @media (max-width: 920px) {
-  .hero-grid, .grid-3, .grid-2, .reel { grid-template-columns: 1fr; }
+  .hero-grid, .grid-3, .grid-2, .reel, .memory-hero-grid, .memory-band, .wiki-flow, .memory-steps, .evidence-grid { grid-template-columns: 1fr; }
   .links { display: none; }
   .section-head { display: block; }
   .section-head p { margin-top: 14px; }
