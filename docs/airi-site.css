@@ -178,6 +178,13 @@ h2 { margin: 16px 0 0; font-size: clamp(30px, 4vw, 52px); line-height: 1.04; }
 .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
 .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .card img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-bottom: 1px solid var(--line); transition: transform 500ms ease; }
+.card video {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-bottom: 1px solid var(--line);
+  background: #eef7f2;
+}
 .card:hover img { transform: scale(1.035); }
 .card.fit-person img {
   object-fit: contain;
@@ -185,6 +192,7 @@ h2 { margin: 16px 0 0; font-size: clamp(30px, 4vw, 52px); line-height: 1.04; }
   background: linear-gradient(180deg, #fbfdfb, #eef7f2);
 }
 .card.fit-person:hover img { transform: none; }
+.card.video-card:hover video { filter: saturate(1.04) contrast(1.02); }
 .scroll-window {
   max-height: 520px;
   overflow-y: auto;
